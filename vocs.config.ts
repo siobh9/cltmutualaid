@@ -34,16 +34,16 @@ export default defineConfig({
       collapsed: false,
       items: [
         {
-          text: 'Tenant Organizing',
-          link: '/tenant-organizing',
+          text: 'Tenants',
+          link: '/tenants',
         },
         {
-          text: 'Worker Organizing',
-          link: '/worker-organizing',
+          text: 'Workers',
+          link: '/workers',
         },
         {
-          text: 'Student Organizing',
-          link: '/student-organizing',
+          text: 'Students',
+          link: '/students',
         },
       ]
     },
