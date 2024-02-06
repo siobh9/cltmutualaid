@@ -2,6 +2,7 @@ import { defineConfig } from 'vocs'
 
 export default defineConfig({
   title: 'CLT Mutual Aid',
+  iconUrl: '/favicon.ico',
   sidebar: [
     {
       text: 'Getting Started',
