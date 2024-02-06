@@ -16,10 +16,6 @@ export default defineConfig({
           link: '/food',
         },
         {
-          text: 'Housing',
-          link: '/housing',
-        },
-        {
           text: 'Clothing',
           link: '/clothing',
         },
