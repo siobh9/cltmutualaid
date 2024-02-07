@@ -9,6 +9,10 @@ export default defineConfig({
       link: '/getting-started',
     },
     {
+      text: 'Events',
+      link: '/events',
+    },
+    {
       text: 'Resources',
       collapsed: false,
       items: [
