@@ -18,15 +18,15 @@ export default defineConfig({
       items: [
         {
           text: 'Food',
-          link: '/food',
+          link: '/resources/food',
         },
         {
           text: 'Clothing',
-          link: '/clothing',
+          link: '/resources/clothing',
         },
         {
           text: 'Masks',
-          link: '/masks',
+          link: '/resources/masks',
         },
       ]
     },
@@ -36,15 +36,15 @@ export default defineConfig({
       items: [
         {
           text: 'Tenants',
-          link: '/tenants',
+          link: '/organizing/tenants',
         },
         {
           text: 'Workers',
-          link: '/workers',
+          link: '/organizing/workers',
         },
         {
           text: 'Students',
-          link: '/students',
+          link: '/organizing/students',
         },
       ]
     },
