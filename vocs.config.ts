@@ -28,6 +28,10 @@ export default defineConfig({
           text: 'Masks',
           link: '/resources/masks',
         },
+        {
+          text: 'Harm Reduction',
+          link: '/resources/harm-reduction',
+        },
       ]
     },
     {
@@ -45,6 +49,10 @@ export default defineConfig({
         {
           text: 'Students',
           link: '/organizing/students',
+        },
+        {
+          text: 'LGBTQAI+',
+          link: '/organizing/lgbtqia+',
         },
       ]
     },
