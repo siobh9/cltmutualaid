@@ -32,6 +32,10 @@ export default defineConfig({
           text: 'Harm Reduction',
           link: '/resources/harm-reduction',
         },
+        {
+          text: 'Community Safety',
+          link: '/resources/community-safety',
+        },
       ]
     },
     {
