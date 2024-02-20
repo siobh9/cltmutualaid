@@ -54,6 +54,10 @@ export default defineConfig({
           text: 'LGBTQAI+',
           link: '/organizing/lgbtqia+',
         },
+        {
+          text: 'Political Parties',
+          link: '/organizing/political-parties',
+        },
       ]
     },
   ],
