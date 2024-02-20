@@ -25,12 +25,8 @@ export default defineConfig({
           link: '/resources/clothing',
         },
         {
-          text: 'Masks',
-          link: '/resources/masks',
-        },
-        {
-          text: 'Harm Reduction',
-          link: '/resources/harm-reduction',
+          text: 'Healthcare',
+          link: '/resources/healthcare',
         },
         {
           text: 'Community Safety',
