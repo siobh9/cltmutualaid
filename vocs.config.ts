@@ -32,6 +32,10 @@ export default defineConfig({
           text: 'Community Safety',
           link: '/resources/community-safety',
         },
+        {
+          text: 'Childcare',
+          link: '/resources/childcare',
+        },
       ]
     },
     {
