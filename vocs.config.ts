@@ -5,8 +5,8 @@ export default defineConfig({
   iconUrl: '/favicon.ico',
   sidebar: [
     {
-      text: 'Getting Started',
-      link: '/getting-started',
+      text: 'Home Page',
+      link: '/',
     },
     {
       text: 'Events',
