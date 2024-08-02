@@ -32,6 +32,6 @@ At this point it will show an error because you haven't updated the DNS records 
 
 Once you have set the DNS records in Cloudflare, Vercel will be auto-refreshing every couple of seconds to see if they have been updated. It shouldn't take longer than 10 minutes for Vercel to be able to see the newly updated records, if it is taking longer for that for Vercel to successfully check them, check and make sure they're set correctly in Cloudflare.
 
-Once Vercel said that it has successfully checked the domain name and is hosting to it, you're good to go! You can go to your domain name in your browser and it should show the site!
+Once Vercel says that it has successfully checked the domain name and is hosting to it, you're good to go! You can go to your domain name in your browser and it should show the site!
 
 A common issue people run into at this point is, if Vercel is showing that it is hosting to the domain name correctly, but when you try to go to the domain name in your browser it gives you a `TOO_MANY_REDIRECTS` error, go to the domain on Cloudflare, click the SSL/TLS tab on the left, and update the SSL/TLS encryption mode setting to "Full (strict)". This should resolve the `TOO_MANY_REDIRECTS` error and your site should be successfully visible when you visit your domain!
