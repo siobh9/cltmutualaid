@@ -36,7 +36,11 @@ export default defineConfig({
           text: 'Disaster Relief',
           link: '/resources/disaster-relief',
         },
-      ]
+        {
+          text: 'Zines',
+          link: '/resources/zines',
+        }
+     ]
     },
     {
       text: 'People to Organize With',
