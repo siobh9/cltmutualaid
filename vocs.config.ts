@@ -39,7 +39,12 @@ export default defineConfig({
         {
           text: 'Zines',
           link: '/resources/zines',
+        },
+        {
+          text: 'Do It Yourself Guides',
+          link: '/resources/diy',
         }
+       }
      ]
     },
     {
