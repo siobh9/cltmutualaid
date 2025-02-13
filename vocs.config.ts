@@ -43,6 +43,10 @@ export default defineConfig({
         {
           text: 'Do It Yourself Guides',
           link: '/resources/diy',
+        },
+        {
+          text: 'Housing',
+          link: '/resources/housing',
         }
      ]
     },
