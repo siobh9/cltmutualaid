@@ -2,7 +2,7 @@
 
 Some understanding of or willingness to learn Markdown and the basics of website hosting is necessary to do this.
 
-The only cost to do this is that of the domain name you want (and you could even forgo that too if you just want to use the url that vercel gives you as a default) - the three services needed to do this (Cloudflare, Github, and Vercel) all have free tiers that the vast majority of these types of sites will stay well within.
+The only cost to do this is that of the domain name you want (and you could even forgo that too if you just want to use the url that vercel gives you as a default) - the three services needed to do this (Cloudflare, Github, and DigitalOcean) all have free tiers that will allow you to host at no cost even at massive scale.
 
 ::::steps
 
@@ -12,28 +12,34 @@ Make an account on Cloudflare, go to the Websites tab, click Add a Site, click "
 
 ### Set up the code
 
-Use [this template](https://github.com/seanmc9/vocs-template) to make your own repository with the template code.
+Use [this template](https://github.com/siobh9/vocs-template) to make your own repository with the template code.
 
-Then, edit [`vocs.config.ts`](https://github.com/seanmc9/vocs-template/blob/main/vocs.config.ts) and the files in [`docs/pages/`](https://github.com/seanmc9/vocs-template/tree/main/docs/pages) to customize the site to your needs.
+Then, edit [`vocs.config.ts`](https://github.com/siobh9/vocs-template/blob/main/vocs.config.ts) and the files in [`docs/pages/`](https://github.com/siobh9/vocs-template/tree/main/docs/pages) to customize the site to your needs.
 
-You can also update the `favicon.ico` file in the [`public/`](https://github.com/seanmc9/vocs-template/tree/main/docs/public) folder if you'd like the image that shows up on the tab to be different.
+You can also update the `favicon.ico` file in the [`public/`](https://github.com/siobh9/vocs-template/tree/main/docs/public) folder if you'd like the image that shows up on the tab to be different.
 
-### Host the site on Vercel
+### Host the site on DigitalOcean
 
-Make an account on [Vercel](https://vercel.com/) (ideally with your Github account to make connecting the two as easy as possible), click Add New, and then click the Project option.
+Make an account on [DigitalOcean](https://www.digitalocean.com/) (ideally with your Github account to make connecting the two as easy as possible), click Create, and then click the App Platform option.
 
-Connect your Github repo with Vercel by following Vercel's steps to "Import Git Repository" (this will ask for permissions to the repository so that Vercel can host the code in it).
+Connect your Github repo with DigitalOcean by following DigitalOcean's steps to "Create Resources From Source" (this will ask for permissions to the repository so that DigitalOcean can host the code in it).
 
-Once this is done, you can see the hosted site at the link that Vercel provides you, and you can also make a commit to your GitHub repo to see how Vercel automatically updates the site every time the code is updated!
+Select the repository you made in the previous step and then:
+- *Make sure to click Edit in the Resources step, and change the Resource Type to a Static Site in the dropdown* (if you won't do this then the site hosting will cost you money).
+- Set the Build Step in the Build Phase to be `npm run build`
+- Set `docs/dist` as the Output Directory
+- Click through to the Review step and click Create Resources to deploy!
+
+Once this is done, you can see the hosted site at the link that DigitalOcean provides you, and you can also make a commit to your GitHub repo to see how DigitalOcean automatically updates the site every time the code is updated! (with static sites sometimes you have to go in and manually deploy the site, DO can sometimes be hit or miss)
 
 ### Connect your domain name
 
-Go to the project on Vercel, click Settings, and then click the Domains tab on the left. Enter the domain name you bought on Cloudflare, click Add, and it will show up in the domains that Vercel is hosting to.
+Go to the project on DigitalOcean, click Settings, click the Edit link for Domains, and click Add Domain. Enter the domain name you bought on Cloudflare, and click Add.
 
-At this point it will show an error because you haven't updated the DNS records on Cloudflare for your domain yet, so go to your domain on Cloudflare, click the DNS tab on the left, and follow the instructions Vercel gives you on which records you should set and with what values.
+Then go to your domain on Cloudflare, click the DNS tab on the left, and follow the instructions DigitalOcean gives you on which records you should set and with what values.
 
-Once you have set the DNS records in Cloudflare, Vercel will be auto-refreshing every couple of seconds to see if they have been updated. It shouldn't take longer than 10 minutes for Vercel to be able to see the newly updated records, if it is taking longer for that for Vercel to successfully check them, check and make sure they're set correctly in Cloudflare.
+Once you have set the DNS records in Cloudflare, DigitalOcean will be auto-refreshing every couple of seconds to see if they have been updated. It shouldn't take longer than 10 minutes for DigitalOcean to be able to see the newly updated records, if it is taking longer for that for DigitalOcean to successfully check them, check and make sure they're set correctly in Cloudflare.
 
-Once Vercel says that it has successfully checked the domain name and is hosting to it, you're good to go! You can go to your domain name in your browser and it should show the site!
+Once DigitalOcean says that it has successfully checked the domain name and is hosting to it, you're good to go! You can go to your domain name in your browser and it should show the site!
 
-A common issue people run into at this point is, if Vercel is showing that it is hosting to the domain name correctly, but when you try to go to the domain name in your browser it gives you a `TOO_MANY_REDIRECTS` error, go to the domain on Cloudflare, click the SSL/TLS tab on the left, and update the SSL/TLS encryption mode setting to "Full (strict)". This should resolve the `TOO_MANY_REDIRECTS` error and your site should be successfully visible when you visit your domain!
+A common issue people run into at this point is, if DigitalOcean is showing that it is hosting to the domain name correctly, but when you try to go to the domain name in your browser it gives you a `TOO_MANY_REDIRECTS` error, go to the domain on Cloudflare, click the SSL/TLS tab on the left, and update the SSL/TLS encryption mode setting to "Full (strict)". This should resolve the `TOO_MANY_REDIRECTS` error and your site should be successfully visible when you visit your domain!
